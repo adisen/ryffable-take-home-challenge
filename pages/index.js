@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Hello World</h1>
+        <h1>Ryffable Data</h1>
       </main>
     </div>
   );
