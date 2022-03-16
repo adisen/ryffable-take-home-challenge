@@ -12,12 +12,12 @@ const Table = props => {
 
   useEffect(() => {
     setAData(prevState => {
-      const data = props.data.data;
+      const data = props.data;
       setNumOfPages(data.length / perPage);
       setDisplayedData(data.slice(0, currentPage * perPage));
       return data;
     });
-  }, []);
+  }, [props]);
 
   const handlePerPageChange = event => {
     setPerPage(prevState => {

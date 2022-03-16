@@ -11,24 +11,24 @@ export default function handler(req, res) {
     {
       _id: '6231c8e05e0ed0517f20f37d',
       name: 'Hays Welch',
-      animal: 'rhinoceros,',
-      food: 'Pasta,',
+      animal: 'rhinoceros',
+      food: 'Pasta',
       thing: 'drill press',
       place: 'Kyrgyzstan'
     },
     {
       _id: '6231c8e00a24834dfcaff0a8',
       name: 'Reyna Mcdowell',
-      animal: 'lovebird,',
-      food: 'Brownies,',
+      animal: 'lovebird',
+      food: 'Brownies',
       thing: 'soda can',
       place: 'Cocos (Keeling Islands)'
     },
     {
       _id: '6231c8e0003cbe0c2908131c',
       name: 'Byers Padilla',
-      animal: 'dog,',
-      food: 'Peaches,',
+      animal: 'dog',
+      food: 'Peaches',
       thing: 'thermometer',
       place: 'Reunion'
     },
