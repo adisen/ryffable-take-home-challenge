@@ -50,7 +50,11 @@ export default function Home({ data: { data } }) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch('http://localhost:3000/api/test');
+  let baseUrl =
+    process.env.NODE_ENV === 'development'
+      ? 'http://localhost:3000'
+      : 'https://ryffable-israel.herokuapp.com';
+  const res = await fetch(`${baseUrl}/api/test`);
   const data = await res.json();
 
   return {
