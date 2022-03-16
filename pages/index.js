@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
-import Table from './components/table';
+import Table from '../components/table';
 
 export default function Home({ data: { data } }) {
   const [displayedData, setDisplayedData] = useState(data);
