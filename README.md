@@ -1,4 +1,5 @@
 # Ryffable Challenge Take Home
+
 Short technical challenge for ryffable.
 
 Congrats in passing Ryffable's first round of interview!
@@ -8,18 +9,22 @@ Kindly find the project assignment. You have 24 hours to complete your assignmen
 Remember to consistently commit your progress throughout your development!
 
 ## Getting Started
+
 You will need to use the following technologies for the project:
 
 ## Task
+
 - Create a test api endpoint using next js api route with the following parameters: name, place, animal, food, things
 - Populate it with data in alphabetucal order from A to Z.
 - Create a table with pagination and search functionality using next js frontend
 - Populate the table with the data from the api endpoint you created.
 
 ### Note
+
 - Use NextJS and Tailwind for frontend
 
 ## Metrics:
+
 You will be assessed based on:
 
 - clean code
@@ -32,4 +37,5 @@ You will be assessed based on:
 - Code Quality
 
 ## Submission
+
 Kindly submit your production ready code by creating a pull request to github, and deploying the final product through heroku.
