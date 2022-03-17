@@ -3,16 +3,28 @@ import TableRow from './table-row';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
-const Table = props => {
-  const [aData, setAData] = useState([]);
-  const [numOfPages, setNumOfPages] = useState(null);
-  const [perPage, setPerPage] = useState(10);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [displayedData, setDisplayedData] = useState([]);
+export type Data = Array<{
+  name: string;
+  place: string;
+  animal: string;
+  food: string;
+  thing: string;
+}>;
+
+type Props = {
+  data: Data[];
+};
+
+const Table: React.FC<Props> = props => {
+  const [aData, setAData] = useState<Array<Data>>([]);
+  const [numOfPages, setNumOfPages] = useState<number>(null);
+  const [perPage, setPerPage] = useState<number>(10);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [displayedData, setDisplayedData] = useState<Array<Data>>([]);
 
   useEffect(() => {
     setAData(prevState => {
-      const data = props.data;
+      const data: Data[] = props.data;
       setNumOfPages(data.length / perPage);
       setDisplayedData(data.slice(0, currentPage * perPage));
       return data;

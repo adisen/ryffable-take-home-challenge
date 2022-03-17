@@ -1,5 +1,14 @@
-export default function handler(req, res) {
-  const data = [
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const data: Array<{
+    _id: string;
+    name: string;
+    animal: string;
+    food: string;
+    thing: string;
+    place: string;
+  }> = [
     {
       _id: '6231c8e0b9a43ccfa69b6be6',
       name: 'Palmer Drake',

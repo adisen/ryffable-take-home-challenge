@@ -1,12 +1,27 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import Table from '../components/table';
+import { GetServerSideProps } from 'next';
 
-export default function Home({ data: { data } }) {
-  const [displayedData, setDisplayedData] = useState(data);
+type Data = {
+  name: string;
+  place: string;
+  animal: string;
+  food: string;
+  thing: string;
+};
 
-  const handleChange = event => {
-    let value = event.target.value.toLowerCase();
+type Props = {
+  data: {
+    data: Data[];
+  };
+};
+
+const Home: React.FC<Props> = ({ data: { data } }) => {
+  const [displayedData, setDisplayedData] = useState<Array<Data>>(data);
+
+  const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
+    let value = event.currentTarget.value.toLowerCase();
 
     setDisplayedData(
       data.filter(item => {
@@ -47,9 +62,10 @@ export default function Home({ data: { data } }) {
       </main>
     </div>
   );
-}
+};
 
-export async function getServerSideProps(context) {
+export default Home;
+export const getServerSideProps: GetServerSideProps = async context => {
   let baseUrl =
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:3000'
@@ -62,4 +78,4 @@ export async function getServerSideProps(context) {
       data
     }
   };
-}
+};
